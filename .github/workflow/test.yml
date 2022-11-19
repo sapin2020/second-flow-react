@@ -17,5 +17,9 @@ jobs:
         run: npm ci
       - name: Execute test
         run: npm test
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT }}
 
         
