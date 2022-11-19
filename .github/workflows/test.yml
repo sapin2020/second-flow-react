@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PAT }}
+        # with:
+        #   token: ${{ secrets.PAT }}
       - name: Install nodejs
         uses: actions/setup-node@v3
         with:
@@ -19,9 +19,9 @@ jobs:
         run: npm ci
       - name: Execute test
         run: npm test
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT }}
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.PAT }}
 
         
